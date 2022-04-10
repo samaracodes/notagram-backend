@@ -8,8 +8,9 @@ class Api::V1::PostsController < ApplicationController
 
  
   def show
-      @post = Post.find_by(id: params[:id])
       @user = user.post.find_by_id(params[:user_id])
+      @post = Post.find_by(id: params[:id])
+
       render json: PostSerializer.new(post)
   end
 
