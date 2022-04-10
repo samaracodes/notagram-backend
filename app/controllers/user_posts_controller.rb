@@ -1,3 +1,0 @@
-class UserPostsController < ApplicationController
-  
-end
